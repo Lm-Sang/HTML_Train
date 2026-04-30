@@ -1,0 +1,51 @@
+html {
+  font-size: 20px;
+}
+body {
+  padding: 20px;
+}
+#j-icon {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  align-content: center;
+}
+#right-icon {
+  color: red;
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+}
+.stat-number {
+  font-size: 40px;
+  font-weight: bold;
+  color: orangered;
+}
+.stat-label {
+  font-size: 25px;
+  color: gray;
+}
+.about-title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  border-bottom: 2px solid orangered;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.about-content {
+  font-size: 25px;
+  color: gray;
+  margin-top: 10px;
+}
+#btn {
+  background-color: white;
+  color: orangered;
+  border: 2px solid orangered;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+}
