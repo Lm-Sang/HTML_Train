@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 250px;
+        height: 200px;
+        border: 5px solid black;
+        margin: 10px;
+      }
+      .image {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* ảnh sẽ được co giãn để vừa với kích thước của box, có thể làm méo ảnh nếu tỉ lệ của ảnh khác với tỉ lệ của box */
+      .fill {
+        object-fit: fill;
+      }
+
+      /* ảnh sẽ được co giãn để vừa với kích thước của box nhưng vẫn giữ nguyên tỉ lệ của ảnh,có khoảng trống nếu tỉ lệ của ảnh khác với tỉ lệ của box */
+      .contain {
+        object-fit: contain;
+      }
+
+      /* ảnh sẽ được co giãn để vừa với kích thước của box nhưng sẽ cắt bớt phần dư, đảm bảo phủ kín toàn bộ box */
+      .cover {
+        object-fit: cover;
+      }
+
+      /* box sizing */
+      .box1 {
+        box-sizing: content-box;
+        width: 200px;
+        height: 200px;
+        border: 5px solid black;
+        padding: 20px;
+        margin: 10px;
+        background-color: red;
+      }
+      .box2 {
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        border: 5px solid black;
+        padding: 20px;
+        margin: 10px;
+        background-color: blue;
+        box-shadow: 10px 10px 10px black;
+        background-image: url(https://img2.thuthuatphanmem.vn/uploads/2019/03/09/anh-cho_115040155.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="https://w3schools.com/html/img_girl.jpg" class="image fill" />
+    </div>
+    <div class="box">
+      <img
+        src="https://w3schools.com/html/img_girl.jpg"
+        class="image contain"
+      />
+    </div>
+    <div class="box">
+      <img src="https://w3schools.com/html/img_girl.jpg" class="image cover" />
+    </div>
+
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+  </body>
+</html>

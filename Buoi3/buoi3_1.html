@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 10px;
+        /* visibility: hidden;       ẩn nhưng không làm mất box
+        display: none;               ẩn và làm mất box
+        opacity: 0; */
+      }
+
+      /*cách viết gộp class*/
+      .box2,
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        margin: 10px;
+      }
+
+      /*Chỉ khi 1 thẻ là h1 và có id là id1 thì mới áp dụng style này*/
+      h1#id1 {
+        color: red;
+      }
+
+      /*Chỉ áp dụng style này cho tất cả các thẻ p nằm bên trong div có class là 'parent'*/
+      .parent p {
+        color: green;
+      }
+
+      /*Chỉ áp dụng style này cho tất cả các thẻ p nằm trực tiếp bên trong div có class là 'parent'*/
+      .parent > p {
+        color: blue;
+      }
+
+      /*Chỉ áp dụng style này cho tất cả các thẻ p nằm ngay sau div có class là 'parent'*/
+      .parent + p {
+        color: orange;
+      }
+
+      /*Chỉ áp dụng style này cho tất cả các thẻ p nằm sau div có class là 'parent'*/
+      .parent ~ p {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <h1>Hello, World!</h1>
+    <h1 id="id1">Hello, World!</h1>
+    <div class="parent">
+      <p>This is a paragraph inside a div with class 'parent'.</p>
+      <div>
+        <p>This is another paragraph inside the same div.</p>
+      </div>
+    </div>
+  </body>
+</html>
