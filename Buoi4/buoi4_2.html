@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 100px;
+        height: 50px;
+        color: orangered;
+        border: 2px solid orangered;
+        border-radius: 30px;
+        text-align: center;
+        align-content: center;
+        background-color: white;
+        transition: 2s linear;
+        /* thời gian chuyển đổi giữa các trạng thái của button, có thể là hover, focus, active
+        animation:
+        ease: ease-in-out;  kiểu chuyển đổi giữa các trạng thái của button, có thể là ease, ease-in, ease-out, ease-in-out
+        ease-in: chuyển đổi chậm dần vào trạng thái hover, focus, active
+        ease-out: chuyển đổi nhanh dần vào trạng thái hover, focus, active
+        ease-in-out: chuyển đổi chậm dần vào trạng thái hover, focus, active và nhanh dần ra khỏi trạng thái hover, focus, active
+        ease: chuyển đổi nhanh dần vào trạng thái hover, focus, active và chậm dần ra khỏi trạng thái hover, focus, active
+        linear: chuyển đổi đều nhau giữa các trạng thái
+        */
+      }
+
+      button:hover {
+        background-color: orangered;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:focus {
+        background-color: orangered;
+        color: white;
+        outline: none;
+      }
+
+      button:active {
+        background-color: orangered;
+        color: white;
+        transform: scale(0.9);
+        /* khi button được click sẽ có hiệu ứng thu nhỏ lại 90% so với kích thước ban đầu 
+        các loại trasnform khác:
+        rotate: xoay button theo một góc nhất định
+        translate: dịch chuyển button theo một khoảng cách nhất định
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <button>Click me</button>
+    </div>
+  </body>
+</html>

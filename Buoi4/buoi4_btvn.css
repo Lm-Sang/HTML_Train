@@ -1,0 +1,364 @@
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 80px;
+  margin-left: 8px;
+  color: gray;
+  align-self: flex-start;
+}
+
+.card-img-hera {
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.75;
+  transition: 0.3s ease-in;
+  transform: scale(1.2);
+}
+
+.hera-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.icon-effect1 {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  color: white;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+.icon-effect2 {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  color: white;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+.icon-effect3 {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  color: white;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+.icon-effect4 {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  color: white;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.diamond-effect {
+  width: 150px;
+  height: 150px;
+  border: 3px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0.6);
+  transition: 0.3s ease-in;
+}
+
+.card:hover .card-img-hera {
+  transform: scale(1);
+}
+
+.card:hover .hera-title {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+  top: 50%;
+  left: 50%;
+}
+.card:hover .icon-effect1 {
+  opacity: 1;
+  top: 45%;
+  left: 45%;
+}
+.card:hover .icon-effect2 {
+  opacity: 1;
+  top: 55%;
+  left: 45%;
+}
+.card:hover .icon-effect3 {
+  opacity: 1;
+  top: 45%;
+  left: 55%;
+}
+.card:hover .icon-effect4 {
+  opacity: 1;
+  top: 55%;
+  left: 55%;
+}
+
+.card:hover .diamond-effect {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.card-img-romeo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.75;
+  transition: 0.3s ease-in;
+  transform: scale(1.2);
+}
+
+.romeo-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  color: white;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.romeo-subtitle {
+  position: absolute;
+  height: 20%;
+  width: 80%;
+  top: 70%;
+  left: 50%;
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.line1 {
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.line2 {
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.card:hover .card-img-romeo {
+  transform: scale(1);
+}
+
+.card:hover .romeo-title {
+  transform: translate(-50%, -50%);
+  top: 42%;
+  left: 50%;
+}
+
+.card:hover .romeo-subtitle {
+  transform: translate(-50%, -50%);
+  top: 63%;
+  left: 50%;
+}
+
+.card:hover .line1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+  opacity: 0.8;
+}
+
+.card:hover .line2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  left: 50%;
+  opacity: 0.8;
+}
+
+.card-img-sarah {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.75;
+  transition: 0.3s ease-in;
+  transform: scale(1.2);
+}
+
+.sarah-title {
+  position: absolute;
+  top: 20%;
+  left: 27%;
+  color: white;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.hidden-box {
+  position: absolute;
+  width: 83%;
+  height: 1.5px;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.line3 {
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  left: -100%;
+  background-color: white;
+  transition: 0.3s ease-in;
+}
+
+.sarah-subtitle {
+  position: absolute;
+  height: 20%;
+  width: 80%;
+  top: 43%;
+  left: 140%;
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.card:hover .card-img-sarah {
+  transform: scale(1);
+}
+
+.card:hover .line3 {
+  transform: translateX(100%);
+}
+
+.card:hover .sarah-subtitle {
+  transform: translate(-50%, -50%);
+  top: 43%;
+  left: 48%;
+}
+
+.card-img-winston {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.75;
+  transition: 0.3s ease-in;
+  transform: scale(1.2);
+}
+
+.winston-title {
+  position: absolute;
+  top: 20%;
+  left: 32%;
+  color: white;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 65%;
+  left: 0%;
+  opacity: 0.75;
+  border-left: 480px solid transparent;
+  border-bottom: 126px solid white;
+  transition: 0.3s ease-in;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+.winston-icon1 {
+  position: absolute;
+  top: 105%;
+  left: 91%;
+  color: gray;
+  font-size: 22px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.winston-icon2 {
+  position: absolute;
+  top: 105%;
+  left: 82%;
+  color: gray;
+  font-size: 22px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.winston-icon3 {
+  position: absolute;
+  top: 105%;
+  left: 73%;
+  color: gray;
+  font-size: 22px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+}
+
+.card:hover .card-img-winston {
+  opacity: 0.6;
+  transition: 0.3s ease-in;
+}
+
+.card:hover .winston-title {
+  transform: translate(-50%, -50%);
+  top: 16%;
+}
+
+.card:hover .triangle {
+  transform: scaleY(1);
+}
+
+.card:hover .winston-icon1 {
+  top: 88%;
+  transition: 0.3s ease-out;
+}
+
+.card:hover .winston-icon2 {
+  top: 88%;
+  transition: 0.34s ease-out;
+}
+
+.card:hover .winston-icon3 {
+  top: 88%;
+  transition: 0.38s ease-out;
+}

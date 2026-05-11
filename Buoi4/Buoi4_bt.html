@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        width: 450px;
+        height: 700px;
+        border: 5px solid black;
+        display: flex;
+        flex-direction: column;
+      }
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-bottom: 5px solid black;
+      }
+      .description {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        background-image: url("https://cdn-icons-png.flaticon.com/128/3135/3135715.png");
+        background-position: center;
+        width: 100%;
+        height: 45%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="image">
+          <img src="../assets/images/profile-image.jpg " class="image" />
+        </div>
+        <div class="description">
+          <p style="font-size: 20px; text-align: center">
+            Description Description Description Description Description
+            Description Description Description Description Description
+            Description Description Description Description Description
+            Description Description Description
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

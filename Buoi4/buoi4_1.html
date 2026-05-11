@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 10px;
+        border: 2px solid black;
+      }
+      .box1 {
+        width: 200px;
+        height: 50px;
+        background-color: red;
+      }
+      .box2 {
+        width: 200px;
+        height: 50px;
+        color: white;
+        background-color: blue;
+      }
+      .box3 {
+        width: 800px;
+        height: 300px;
+        color: white;
+        background-color: green;
+      }
+      .static {
+        position: static;
+      }
+
+      /* phần tử sẽ được định vị theo vị trí mặc định của nó trong luồng tài liệu */
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+      }
+
+      /* phần tử sẽ được định vị tuyệt đối so với phần tử cha gần nhất có position khác static, nếu không có phần tử cha nào có position khác static thì sẽ được định vị so với cửa sổ trình duyệt */
+      .absolute {
+        position: absolute;
+        top: 20px;
+        left: 300px;
+      }
+
+      /* phần tử sẽ được định vị cố định so với cửa sổ trình duyệt, không bị ảnh hưởng bởi cuộn trang */
+      .fixed {
+        position: fixed;
+        top: 20px;
+        left: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">Box 1</div>
+      <div class="box2">Box 2</div>
+    </div>
+
+    <div class="container">
+      <div class="box1 static">Static</div>
+      <div class="box2">Box 2</div>
+    </div>
+
+    <div class="container">
+      <div class="box1 relative">Relative</div>
+      <div class="box2">Box 2</div>
+    </div>
+
+    <div class="container">
+      <div class="box1 absolute">Absolute</div>
+      <div class="box2">Box 2</div>
+    </div>
+
+    <div class="container">
+      <div class="box1 fixed">Fixed</div>
+      <div class="box2">Box 2</div>
+    </div>
+
+    <div>
+      <div class="box3">Box 3</div>
+      <div class="box3">Box 3</div>
+
+      <div class="box3">Box 3</div>
+
+      <div class="box3">Box 3</div>
+      <div class="box3">Box 3</div>
+      <div class="box3">Box 3</div>
+    </div>
+  </body>
+</html>
