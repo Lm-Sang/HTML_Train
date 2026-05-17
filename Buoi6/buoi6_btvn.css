@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.logo svg {
+  fill: white;
+}
+
+.logo svg:hover {
+  fill: red;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.tab a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.tab-item > a::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 1%;
+  width: 100%;
+  height: 200%;
+  border-radius: 30px;
+  background-color: gray;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab-item::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  left: 3%;
+  width: 95%;
+  height: 5px;
+  border-radius: 30px;
+  background-color: blue;
+  opacity: 0;
+  z-index: 2;
+}
+
+a:hover::before {
+  opacity: 0.5;
+}
+
+.tab-item:hover::after {
+  opacity: 1;
+}
+
+.drop-down > a::after {
+  content: "▼";
+  font-size: 8px;
+  color: #bbb;
+  margin-left: 8px;
+  position: relative;
+  top: -2px;
+}
+
+.share > a::after {
+  content: "↗";
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+  margin-left: 8px;
+  position: relative;
+  top: -2px;
+}
+
+.drop-down-menu {
+  position: absolute;
+  top: 250%;
+  left: 0;
+  width: 110px;
+  background: black;
+  border-radius: 10px;
+  padding: 22px 0;
+  display: none;
+}
+
+.tab-item:hover .drop-down-menu {
+  display: block;
+}
+
+.drop-down-menu a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: gray;
+  background: transparent;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.drop-down-menu a:hover {
+  color: white;
+  background: gray;
+}
+
+.right-area {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  border: none;
+  background: gray;
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.search-icon {
+  color: white;
+  font-size: 16px;
+}
+
+.global-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  transition: 0.5s ease;
+}
+
+.global-btn:hover {
+  background-color: gray;
+  opacity: 0.8;
+}
+
+.global-icon {
+  font-size: 16px;
+}
+
+.play-button {
+  padding: 10px 20px;
+  background-color: blue;
+  opacity: 0.8;
+  color: black;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+
+.play-button:hover {
+  color: white;
+}

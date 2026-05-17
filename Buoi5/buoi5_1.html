@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+        position: relative;
+        color: black;
+        font-size: 40px;
+        margin-left: 40px;
+      }
+
+      a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 40px;
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition: 1s ease;
+      }
+
+      a:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Hover me</a>
+  </body>
+</html>
