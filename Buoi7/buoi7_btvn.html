@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./buoi3_btvn.css" />
+    <script
+      src="https://kit.fontawesome.com/fa287fee30.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      html {
+        font-size: 20px;
+      }
+      body {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      p {
+        margin: 0;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        height: 80px;
+        padding: 0 6%;
+
+        background-color: white;
+        box-sizing: border-box;
+      }
+
+      .header-left,
+      .header-right {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-right {
+        gap: 25px;
+      }
+      #j-icon {
+        font-size: 18px;
+        color: white;
+        align-content: center;
+        border-radius: 3px;
+        width: 40px;
+        height: 40px;
+        background-color: black;
+      }
+
+      .header-name {
+        font-size: 22px;
+        color: black;
+        margin-left: 5px;
+        transition: 0.5s ease;
+      }
+
+      #right-icon {
+        font-size: 25px;
+        color: orangered;
+        margin-right: 20px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 8%;
+      }
+
+      .information {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .info-image {
+        height: 300%;
+        width: 45%;
+      }
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .info-content {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        margin-top: 2%;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: start;
+        padding-left: 8%;
+        gap: 8%;
+      }
+      .stat-number {
+        font-size: 40px;
+        font-weight: bold;
+        color: orangered;
+      }
+      .stat-label {
+        font-size: 25px;
+        color: gray;
+      }
+
+      .about {
+        margin-top: 40px;
+      }
+      .about-title {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        border-bottom: 2px solid orangered;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      .about-content {
+        font-size: 130%;
+        color: gray;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      #btn {
+        background-color: white;
+        color: orangered;
+        border: 2px solid orangered;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.5s ease;
+      }
+
+      #btn:focus {
+        background-color: orangered;
+        color: white;
+      }
+
+      .skills {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+      .core-skills,
+      .other-skills {
+        width: 49%;
+      }
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .skill-btn {
+        background-color: white;
+        color: black;
+        border: 2px solid gray;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-size: 14px;
+      }
+
+      .experience-title {
+        margin-top: 40px;
+        align-self: flex-start;
+      }
+
+      .experience {
+        display: flex;
+        justify-content: space-between;
+      }
+      .present,
+      .pass {
+        width: 49%;
+      }
+      .experience-duration {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 8px;
+      }
+      .experience-company {
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+      .experience-job {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+      .experience-list {
+        color: gray;
+        padding-left: 10px;
+      }
+      .experience-list li {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 992px) {
+        body {
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+        .header {
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          padding-left: 13%;
+          padding-right: 13%;
+        }
+        .header-name {
+          transform: scale(0);
+          transform-origin: left;
+          transition: 0.5s ease;
+        }
+
+        .container {
+          margin-top: 0;
+        }
+
+        .information {
+          margin-top: 5%;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .info-image,
+        .info-content {
+          padding: 0;
+          width: 80%;
+        }
+
+        .info-content {
+          margin-left: 5%;
+        }
+
+        .info-content p {
+          padding: 0;
+          margin: 0;
+        }
+
+        .about {
+          width: 80%;
+        }
+
+        #btn {
+          font-size: 14px;
+        }
+
+        .skills {
+          width: 80%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .core-skills,
+        .other-skills {
+          width: 100%;
+          gap: 20px;
+        }
+
+        .experience-title {
+          width: 80%;
+          align-self: auto;
+        }
+
+        .experience {
+          width: 80%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .present,
+        .pass {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <i class="fa-solid fa-j" id="j-icon"></i>
+        <span class="header-name">JASON STROFF</span>
+      </div>
+      <div class="header-right">
+        <i class="fa-brands fa-square-github" id="right-icon"></i>
+        <i class="fa-brands fa-stack-overflow" id="right-icon"></i>
+        <i class="fa-brands fa-square-linkedin" id="right-icon"></i>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+      <div class="information">
+        <div class="info-image">
+          <img src="../assets/images/profile-image.jpg " class="image" />
+        </div>
+        <div class="info-content">
+          <p style="font-size: 100%; padding-left: 8%; margin-bottom: 10%">
+            HI THERE
+          </p>
+          <div style="font-size: 250%; padding-left: 8%; margin-bottom: 10%">
+            <b>I'm Jason Stroff</b> <br />
+            <b>UI/UX DESIGNER + </b> <br />
+            <b>DEVELOPER based in </b> <br />
+            <b>Florida</b>
+          </div>
+          <div class="stats">
+            <div>
+              <span class="stat-number">6+ </span><br />
+              <span class="stat-label">Experience</span>
+            </div>
+            <div>
+              <span class="stat-number">89 </span><br />
+              <span class="stat-label">Projects</span>
+            </div>
+            <div>
+              <span class="stat-number">52 </span><br />
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about">
+        <p class="about-title">ABOUT ME</p>
+        <p class="about-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum
+          ante a porta blandit. Quisque velit tortor, ultricies in quam ut,
+          luctus convallis metus. Nunc vitae felis rutrum, mattis justo quis,
+          bibendum tellus. Integer bibendum eget dolor nec venenatis. Aliquam
+          erat volutpat. Etiam et est vitae turpis accumsan vulputate. Curabitur
+          et vehicula nisl, eu congue dolor. Vivamus nec hendrerit mi. Nulla
+          consequat tempor.
+        </p>
+        <p style="text-align: center">
+          <button id="btn">DOWNLOAD RESUME</button>
+        </p>
+      </div>
+
+      <div class="skills">
+        <div class="core-skills">
+          <p class="about-title">CORE SKILLS</p>
+          <div class="skill-list">
+            <button class="skill-btn">JavaScript</button>
+            <button class="skill-btn">Node.js</button>
+            <button class="skill-btn">Express.js</button>
+            <button class="skill-btn">MongoDB</button>
+            <button class="skill-btn">Vue.js</button>
+            <button class="skill-btn">React</button>
+            <button class="skill-btn">Sequelize</button>
+            <button class="skill-btn">GitHub</button>
+            <button class="skill-btn">HTML</button>
+          </div>
+        </div>
+        <div class="other-skills">
+          <p class="about-title">OTHER SKILLS</p>
+          <div class="skill-list">
+            <button class="skill-btn">Storyblok</button>
+            <button class="skill-btn">PWAs</button>
+            <button class="skill-btn">Responsive Web Design</button>
+            <button class="skill-btn">React</button>
+            <button class="skill-btn">Vuetify</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-title">
+        <p class="about-title">WORK EXPERIENCE</p>
+      </div>
+      <div class="experience">
+        <div class="present">
+          <p class="experience-duration">2019 - Present</p>
+          <p class="experience-company">Matrix Media Inc</p>
+          <p class="experience-job">Full Stack Developer</p>
+          <p style="color: gray">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+            sem maximus, ornare metus ut, congue enim.
+          </p>
+          <ul class="experience-list">
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+              sem maximus, ornare metus ut.
+            </li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          </ul>
+        </div>
+        <div class="pass">
+          <p class="experience-duration">2018 - 2019</p>
+          <p class="experience-company">Lexind</p>
+          <p class="experience-job">Senior App Developer</p>
+          <p style="color: gray">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+            sem maximus, ornare metus ut, congue enim.
+          </p>
+          <ul class="experience-list">
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+              sem maximus, ornare metus ut.
+            </li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+              sem maximus, ornare metus ut.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
