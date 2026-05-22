@@ -12,6 +12,7 @@ button.addEventListener("click", function () {
     alert("Vui lòng nhập đầy đủ thông tin");
     return;
   }
+  box2.style.display = "block";
   box2.style.backgroundColor = colorInput.value;
   box2.style.width = widthInput.value + "px";
   box2.style.height = heightInput.value + "px";
@@ -20,5 +21,5 @@ box2.addEventListener("click", function () {
   colorInput.value = "";
   widthInput.value = "";
   heightInput.value = "";
-  box2.style.backgroundColor = "transparent";
+  box2.style.display = "none";
 });
