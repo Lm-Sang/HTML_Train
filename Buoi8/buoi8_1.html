@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- inline script -->
+    <!-- <button onclick="alert('hi')">Click me</button> -->
+    
+    <!-- internal script -->
+    <script>
+        console.log('hello world');
+    </script>
+
+    <!-- external script -->
+    <!-- <script src="./buoi8_1.js"></script> -->
+        
+    </script>
+
+    <div id="title1">Title 1</div>
+    <div class="box1">Box 1</div>   
+    <div class="box1">Box 1</div>
+    <button>Click me </button>
+    <script>
+        // DOMContentLoaded event
+        let title1 = document.getElementById("title1"); //Lấy phần tử có id là title1
+        let box1 = document.querySelector(".box1"); //Lấy phần tử bất kì (.class, #id, tag) chỉ trả về 1 phần tử đầu tiên
+        let button = document.querySelector("button"); //Lấy phần tử button đầu tiên
+        button.addEventListener("click", function() { //Thêm sự kiện click cho button
+            alert("Button clicked!"); //Hiển thị thông báo khi button được click
+        });
+        box1.innerText = "Hello"; //Thay đổi nội dung của phần tử box1 thành "Hello"
+        box1.innerHTML = "<b>Hello</b>"; //Thay đổi nội dung của phần tử box1 thành "Hello" và in đậm
+        box1.style.color = "red"; //Thay đổi màu chữ của phần tử box1 thành đỏ
+    </script>
+</body>
+</html>

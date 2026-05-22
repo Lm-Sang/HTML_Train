@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  margin-top: 50px;
+}
+.box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input {
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.box2 {
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  width: max-content;
+  height: 84px;
+  border-radius: 5px;
+}
