@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- // Các loại event khác: 
+        // mouseover: khi con trỏ chuột di chuyển vào phần tử
+        // mouseout: khi con trỏ chuột di chuyển ra khỏi phần tử
+        // keydown: khi một phím được nhấn xuống
+        // keyup: khi một phím được thả ra
+        // change: khi giá trị của một phần tử thay đổi (thường dùng cho input, select)
+        // submit: khi một form được gửi đi -->
+
+    <div>A</div>
+    <div>
+      B
+      <div>B-A</div>
+    </div>
+    <p>paragraph</p>
+    <div>C</div>
+
+    <button id="myButton">Click me</button>
+    <script>
+      let button = document.getElementById("myButton");
+      let div2 = document.querySelector("div:nth-child(2)"); //Lấy phần tử div thứ 2
+      let div2_1 = document.querySelector("div div:nth-child(1)"); //Lấy phần tử div con đầu tiên của phần tử div
+      let div3 = document.querySelector("div:nth-of-type(3)"); //Lấy phần tử div thứ 3 (bỏ qua phần tử p)
+      button.addEventListener("click", function () {
+        alert("Button clicked!"); //Hiển thị thông báo khi button được click
+      });
+      div2.style.color = "red";
+      div3.style.color = "red";
+      div2_1.style.color = "blue";
+    </script>
+  </body>
+</html>
