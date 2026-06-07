@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+
+      button {
+        color: black;
+        background-color: yellow;
+      }
+
+      .dark {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>thẻ 1</div>
+    <div>thẻ 2</div>
+    <div>thẻ 3</div>
+    <button>Click me</button>
+    <script>
+      const divs = document.querySelectorAll("div"); //Lấy tất cả phần tử div
+      const button = document.querySelector("button"); //Lấy phần tử button
+
+      button.addEventListener("click", function () {
+        button.classList.toggle("dark");
+        document.body.classList.toggle("dark");
+      });
+
+      //   divs.forEach(function (div) {
+      //     div.addEventListener("click", function () {
+      //       div.classList.add("blue"); //Thêm lớp "blue" cho phần tử div khi được click
+      //     });
+      //     div.addEventListener("click", function () {
+      //       div.classList.remove("blue"); //Xóa lớp "blue" khỏi phần tử div khi được click
+      //     });
+      //         div.addEventListener("click", function () {
+      //           div.classList.toggle("red");
+      //         });
+      //   });
+
+      divs.forEach(function (div) {
+        div.addEventListener("click", function () {
+          divs.forEach(function (d) {
+            d.classList.remove("red");
+          });
+          div.classList.add("red");
+        });
+      });
+    </script>
+  </body>
+</html>
